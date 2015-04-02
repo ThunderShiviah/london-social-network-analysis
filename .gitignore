@@ -55,3 +55,6 @@ target/
 
 # Ignore the data folder
 data/
+
+# Ipython notebook metadata
+.ipynb_checkpoints
