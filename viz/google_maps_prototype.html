@@ -7,8 +7,13 @@
 
             function drawMarkersMap() {
                 var data = google.visualization.arrayToDataTable([
-                        ['Location',   'Subscriber Name', 'Subscriptions Purchased'],
-                        ['Leman Street, London',  'heathcliff', 1],
+                        ['Location',   'Subscriber Name'],
+                        ['Leman Street, London', 'Mr. Assur' ],
+                        ['Cannon Street, London', 'Mr. Alexander' ],
+                        ['Savage Gardens,  London', 'Mr. Ansell' ],
+                        ['Canonbury, London', 'Mr. Solomon Cohen' ],
+                        ['Dublin', 'Mr. Woolf Cohen' ],
+                        ['Barbadoes', 'Mr. Hart' ]
                         ]);
 
                 var options = {
@@ -21,7 +26,7 @@ sizeAxis: { minValue: 0, maxValue: 100 },
                 var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
                 chart.draw(data, options);
             };
-</script>
+        </script>
     </head>
     <body>
         <div id="chart_div" style="width: 900px; height: 500px;"></div>

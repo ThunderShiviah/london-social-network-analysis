@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+            google.load('visualization', '1', { 'packages': ['map'] });
+            google.setOnLoadCallback(drawMap);
+
+            function drawMap() {
+                var data = google.visualization.arrayToDataTable([
+                ['Country', 'Name'],
+                ['Leman Street, London', 'Mr. Assur' ],
+                ['Cannon Street, London', 'Mr. Alexander' ],
+                ['Savage Gardens,  London', 'Mr. Ansell' ],
+                ['Canonbury, London', 'Mr. Solomon Cohen' ],
+                ['Dublin', 'Mr. Woolf Cohen' ],
+                ['Barbadoes', 'Mr. Hart' ]
+                ]);
+
+                var options = { showTip: true };
+
+                var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+                map.draw(data, options);
+            };
+        </script>
+    </head>
+    <body>
+        <div id="chart_div"></div>
+    </body>
+</html>
